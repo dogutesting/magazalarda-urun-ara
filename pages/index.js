@@ -864,6 +864,9 @@ export default function En10() {
         }
 
         setInputValue(beforeInputValue);
+        setActiveList(0);
+        setActiveButton(1);
+
 
         if(dataList.query == beforeInputValue) {
             if(!dataList[storeValue] && !dataList[storeValue][selectValue]) {
