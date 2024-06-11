@@ -1,0 +1,23 @@
+{
+  "name": "magaza-urun-liste",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "npm-install": "(npm i && cd en10-magaza-liste && npm i)",
+    "pnpm-install": "(pnpm i && cd en10-magaza-liste && pnpm i)",
+    "customdev": "concurrently \"node en10-magaza-liste/app.js\" \"next dev\"",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "immer": "^10.1.1",
+    "next": "14.2.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-image-gallery": "^1.3.0",
+    "react-select": "^5.8.0",
+    "react-star-ratings": "^2.3.0"
+  }
+}
