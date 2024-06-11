@@ -34,7 +34,7 @@ async function en10_all(req) {
   .then(async(response) => {
       if (!response.ok) {
           //throw new Error('Ağ yanıtı hatası oldu');
-          console.log(response);
+          /* console.log(response); */
           return "hoodini";
       }
       return await response.json();
@@ -43,7 +43,6 @@ async function en10_all(req) {
       return data;
   })
   .catch(error => {
-      //! burada kendime mesaj yollayabilirim, sistem çalışmayı durdurdu gibi
       console.error('Hata:', error);
   });
 

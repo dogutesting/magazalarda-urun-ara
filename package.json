@@ -1,11 +1,10 @@
 {
   "name": "magaza-urun-liste",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "npm-install": "(npm i && cd en10-magaza-liste && npm i)",
-    "pnpm-install": "(pnpm i && cd en10-magaza-liste && pnpm i)",
+    "custom-dev": "concurrently \"node en10-magaza-liste/app.js\" \"next dev\"",
+    "custom-install": "(npm i && cd en10-magaza-liste && npm i && npx playwright install firefox)",
     "customdev": "concurrently \"node en10-magaza-liste/app.js\" \"next dev\"",
     "start": "next start",
     "lint": "next lint"

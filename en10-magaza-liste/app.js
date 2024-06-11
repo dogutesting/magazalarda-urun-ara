@@ -1,20 +1,12 @@
-import express, { response } from 'express';
+import express from 'express';
 /* import cors from 'cors'; */
 import { firefox } from 'playwright';
 import { store_infos, all_stores } from './En10Search.js';
-
-/* import fs from 'fs';
-import * as cheerio from 'cheerio'; */
 
 const app = express();
 const PORT = 3131;
 
 app.use(express.json());
-
-/* app.use(cors({
-    origin: 'https://enonlar.com',
-    optionsSuccessStatus: 200
-})) */
 
 let browser = null;
 let page = null;
@@ -27,8 +19,6 @@ async function launchBrowser() {
 launchBrowser().then(async () => {
     console.log("Tarayıcı başladı, siteler ziyaret ediliyor.");
     const start = process.hrtime();
-    //! BÜTÜN URL'LERE TEK TEK GİDİP COOKİLER TOPLANACAK
-        //! amazon test edildiği için yorum satırına aldım
     await page.goto(store_infos["Hepsiburada"].store_fastest_url);
     await page.goto(store_infos["Amazon"].store_fastest_url);
     const end = process.hrtime(start);
